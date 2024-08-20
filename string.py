@@ -105,15 +105,16 @@
 #     bill=(unit-200)*10+500
 #     print(bill)
 
-a=int(input("enter a 1st number"))
-b=int(input("enter second number"))
-c=int(input("enter therd number"))
-if a>b:
-    if a>c:
-        print(a)
-    else:
-        print(c)
-if b>c:
-    print(b)
-else:
-    print(c)
+# a=int(input("enter a 1st number"))
+# b=int(input("enter second number"))
+# c=int(input("enter therd number"))
+# if a>b:
+#     if a>c:
+#         print(a)
+#     else:
+#         print(c)
+# if b>c:
+#     print(b)
+# else:
+#     print(c)
+
