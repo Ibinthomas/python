@@ -121,11 +121,103 @@
 # #4 5 6 
 # #7 8 9 
 
-for i in range(4):
-    if i%2==0:
-        for j in range(3):
-            print(j,end="\t")
-    else:
-       for j in range(3):
-        print(2-j,end="\t")
-    print()
+# for i in range(4):
+#     if i%2==0:
+#         for j in range(3):
+#             print(j,end="\t")
+#     else:
+#        for j in range(3):
+#         print(2-j,end="\t")
+#     print()
+
+"""
+0       1       2
+2       1       0
+0       1       2
+2       1       0
+"""
+
+
+# for i in range(3):
+#     for j in range(3):
+#         if j==0:
+#             print('A',end='\t')
+#         elif j==1:
+#             print('B',end='\t')
+#         elif j==2:
+#             print('c',end='\t')
+#     print()
+
+#     A B C 
+#     A B C 
+#     A B C
+
+# for i in range(3):
+#     a=65
+#     for j in range(3):
+#         print(chr(a+j),end=" ")
+#     print()
+
+# a=1
+# for i in range(1,4):
+#     for ja in range(i):
+#         print(a,end=" ")
+#         a+=1
+#     print()    
+
+# for i in range(1,4):
+#     for j in range(i):
+#         print(i-j,end=" ")
+#     print()
+        
+# '1 
+# '2 1
+# '3 2 1'
+
+# for i in range(3):
+#     for j in range(3):
+#         if i==j:
+#             print(5,end=" ")
+#         else:
+#             print("#",end=" ")
+#     print()        
+
+
+# for i in range(1,4):
+#     a=65
+#     for j in range(i):
+#         print(chr(a+j),end=" ")
+#     print()
+
+# for i in range(1,4):
+#     a=64
+#     for j in range(i):
+#         print(chr(a+i),end=" ")
+#     print()
+
+# for i in range(1,4):
+#     a=64
+#     for j in range(i):
+#         print(chr(a+(i-j)),end=" ")
+#     print()
+
+# for i in range(4):
+   
+#     if i%2==0:
+#         for j in range(3):
+#             print(j,end="\t")
+#     else:
+#         a=65
+#         for j in range(3):
+#             print(chr(a+j),end="\t")
+#     print()
+"""
+0       1       2
+A       B       C
+0       1       2
+A       B       C
+"""
+
+l=[2,4,1,3]
+for i in l:
+    print("*"*i)
