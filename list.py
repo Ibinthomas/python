@@ -66,7 +66,76 @@ yes
 2
 """
 
-l=[1,5,8,10,11]
-for i in l:
-    if i%2==0:
-print()
+# l=[1,5,8,10,11]
+# s=0
+# for i in l:
+#     if i%2==0:
+#         print(i)
+#         s+=i
+# print("sum=",s)
+
+# """
+# 8
+# 10
+# sum= 18
+# """
+
+
+# l=["hello","good", "morning"]
+# l.reverse()
+# print(l)
+
+# """
+# ['morning', 'good', 'hello']
+# """
+
+
+# l=["hello","good", "morning"]
+# for i in l:
+#     print(i[::-1])
+
+# """
+# olleh
+# doog
+# gninrom
+# """
+
+# l=[1,5,3,10,'ibin',55]
+# sum=0
+# for i in l:
+#     if type(i)==int or type(i)==float:
+#         sum+=i
+# print(sum)
+"""
+74
+"""
+
+# l=[5,8,5,1,2,3,8,5]
+# dup=[]
+# for i in l:
+#     if i not in dup:
+#         dup.append(i)
+# print(dup)
+"""
+[5, 8, 1, 2, 3]
+"""
+
+# name=[]
+# limit=int(input("enter a limit"))
+# for i in range(limit):
+#     names=input("enter a names:") 
+#     name.append(names)
+# print(name)
+
+"""
+['abi', 'deepa', 'ibin', 'diya', 'seena']
+"""
+
+std=[]
+limit=int(input("enter a limit"))
+for i in range(limit):
+    names=input("enter a names:") 
+    age=int(input("enter a age:"))
+    mark=int(input("enter a mark:")) 
+    std.append([names,age,mark])
+print(std)
