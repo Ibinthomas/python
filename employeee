@@ -1,0 +1,20 @@
+employee=[]
+while True:
+    print(
+        '''
+1.Register Employee
+2.Display Employees
+3.Update Employee Deatils
+4.Delete Employee
+5.Add Task
+6.Search Employee
+7.Exit'''
+)
+    choice=int(input("enter your choice" ))
+    if choice==1:
+        emp_name=input("enter a names:") 
+        id=int(input("enter a id:"))
+        age=int(input("enter a age:"))
+        salary=int(input("enter a salary:"))
+        position=input("enter a position:")
+        employee.append([emp_name,age,salary])
