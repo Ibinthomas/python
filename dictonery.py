@@ -1,5 +1,5 @@
-d={'name': 'ibin',
-   'age': '20'}
+# d={'name': 'ibin',
+#    'age': '20'}
 # print(d)
 # print(d['age'])
 # d['name']="abhi"
@@ -38,9 +38,36 @@ dict_items([('name', 'ibin'), ('age', '20')])
 """
 {'name': None, 'age': None, 'mark': None, 'place': None}
 """
-d={}
-d.setdefault('name')
-print(d)
+# d={}
+# d.setdefault('name')
+# print(d)
 """
 {'name': None}
 """
+
+# std=[{'name':'a','age':20},
+#      {'name':'b','age':30},
+#      {'name':'c','age':25},
+#      {'name':'d','age':35}]
+# b=[]
+# a=[]
+# for i in std:
+#     if i['age']<30:
+#         b.append(i)
+#     else:
+#         a.append(i)
+# print("above in 30")
+# print('{:<10}{:<5}'.format('name','age'))
+# for i in a:
+#    print('{:<10}{:<5}'.format(i['name'],i['age']))
+# print("below in 30")
+# print('{:<10}{:<5}'.format('name','age'))
+# for i in b:
+#     print('{:<10}{:<5}'.format(i['name'],i['age']))
+
+num={}
+n=int(input("enter a number"))
+for i in range(n+1):
+   print(i) 
+   num[i]=i*i
+print(num)
