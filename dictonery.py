@@ -19,15 +19,28 @@ d={'name': 'ibin',
 # else:
 #     print("no")
 
-print(d.get('name'))
-print(d.values())
-print(d.keys())
-print(d.items())
-d.update({'mark':'100'})
-print(d)
+# print(d.get('name'))
+# print(d.values())
+# print(d.keys())
+# print(d.items())
+# d.update({'mark':'100'})
+# print(d)
 """
 dict_values(['ibin', '20'])
 dict_keys(['name', 'age'])
 dict_items([('name', 'ibin'), ('age', '20')])
 {'name': 'ibin', 'age': '20', 'mark': '100'}
+"""
+# d={}
+# l=['name','age','mark','place']
+# d=d.fromkeys(l)
+# print(d)
+"""
+{'name': None, 'age': None, 'mark': None, 'place': None}
+"""
+d={}
+d.setdefault('name')
+print(d)
+"""
+{'name': None}
 """

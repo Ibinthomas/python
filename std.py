@@ -8,7 +8,7 @@ while True:
           5.search
           6.break
 """)
-    choice=int(input("enter your choice" ))
+    choice=int(input("enter your choice :" ))
     if choice==1:
         names=input("enter a names:") 
         age=int(input("enter a age:"))
