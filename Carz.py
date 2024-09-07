@@ -11,7 +11,7 @@ while True:
     if choice==1:
         name=input("enter the Owner name:")
         car_no=input("enter the vehicle number:")
-        vh_model=input("Enter the vehicle model")
+        vh_model=input("Enter the vehicle model:")
         mob_no = int(input("Enter Mobile Number: "))
         Address=input("enter the address:")
         Carz.append([name,car_no,vh_model,mob_no,Address,])
@@ -37,7 +37,7 @@ while True:
         else:
             print("Vehile is not found.")
     elif choice == 4:
-        car_no =input("Enter the vehile details: ")
+        car_no =input("Enter the vehile number: ")
         for i in Carz:
             if i[1] == car_no:
                 print("1. Update Name")
@@ -56,12 +56,14 @@ while True:
         else:
             print("it's not found.")
     elif choice == 5:
-        car_no=input("Enter vehicle no to remove: ")
+        car_no=input("Enter vehicle no to Delete: ")
         for i in Carz:
             if i[1] == car_no:
                 Carz.remove(i)
                 print("Vehicle deleted successfully!")
-            break
+            else:
+                print("Vehicle is not found")
+                break
         else:
             print("Customer not found.")
     elif choice == 6:
