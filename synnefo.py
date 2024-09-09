@@ -14,7 +14,9 @@ while True:
     11. exit
     """)
     choice = int(input("Enter Your Choice: "))
+
     if choice == 1:
+
         id=int(input("Enter Employee ID : "))
         name = input("Enter a Name: ")
         mob_no = int(input("Enter mobile number: "))
@@ -25,6 +27,7 @@ while True:
         print("Empolyee added successfully!")
 
     elif choice == 2:
+            
             if synnefo:
                 print('_' * 85)
                 print('{:<10}{:<15}{:<15}{:<15}{:<15}{:<15}'.format('ID', 'Name', 'Mobile', 'Position', 'Salary','address'))
@@ -35,6 +38,7 @@ while True:
                 print("Employee IS NOT FOUND")
 
     elif choice == 3:
+
         emp_id = input("Enter the Id of employee to update: ")
         for i in synnefo:
             if i['emp_id'] == id:
@@ -50,6 +54,7 @@ while True:
             print("Employee ID not in the Database")
                     
     elif choice == 4:
+
         s_id=int(input("Enter Employee ID : "))
         s_name = input("Enter a Name: ")
         time=input("Enter the time slot: ")
@@ -59,6 +64,7 @@ while True:
         print("Empolyee schedule added successfully!")
 
     elif choice == 5:
+            
             if synnefo:
                 print('_' * 70)
                 
@@ -70,6 +76,7 @@ while True:
                 print("Employee IS NOT FOUND")
 
     elif choice==6:
+
         id=int(input('Enter the id to be delete: '))
         f=0
         for i in synnefo:
@@ -80,6 +87,7 @@ while True:
             print('invalid id!!!')
 
     elif choice==7:
+
         std_id=int(input("Enter Student ID : "))
         std_name = input("Enter Student Name: ")
         std_mobno = int(input("Enter mobile number: "))
@@ -90,6 +98,7 @@ while True:
         print("Empolyee added successfully!")
 
     elif choice == 8:
+            
             if synnefo:
                 print('_' * 85)
                 print('{:<10}{:<15}{:<15}{:<15}{:<15}{:<15}'.format('ID', 'Name', 'Mobile', 'Cource', 'Fee','address'))
