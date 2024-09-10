@@ -29,12 +29,12 @@
 # print(a)
 # print(b)
 
-def fun4():
-    a=1
-    b=2
-    c=3
-    return a,b,c
-a1,b1,c1=fun4()
-print(a1)
-print(b1)
-print(c1)
+# def fun4():
+#     a=1
+#     b=2
+#     c=3
+#     return a,b,c
+# a1,b1,c1=fun4()
+# print(a1)
+# print(b1)
+# print(c1)
