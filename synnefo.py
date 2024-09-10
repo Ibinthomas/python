@@ -60,7 +60,7 @@ while True:
         time=input("Enter the time slot: ")
         subject = input("Enter the subject: ")
         lab_no = int(input("Enter the lab_no: "))
-        synnefo.append({'s_id':s_id,'s_name':s_name,'emp_time':time,'emp_subject':subject, 'emp_lab':lab_no})
+        synnefo.append({'id':s_id,'s_name':s_name,'emp_time':time,'emp_subject':subject, 'emp_lab':lab_no})
         print("Empolyee schedule added successfully!")
 
     elif choice == 5:
@@ -71,7 +71,7 @@ while True:
                 print('{:<10}{:<15}{:<15}{:<15}{:<15}'.format('ID', 'Name', 'Time', 'Subjuct', 'Lab number'))
                 print('_' * 70)
             for i in synnefo:
-                    print('{:<10}{:<15}{:<15}{:<15}{:<15}'.format(i['s_id'], i['s_name'], i['emp_time'], i['emp_subject'], i['emp_lab']))
+                    print('{:<10}{:<15}{:<15}{:<15}{:<15}'.format(i['id'], i['s_name'], i['emp_time'], i['emp_subject'], i['emp_lab']))
             else:
                 print("Employee IS NOT FOUND")
 
