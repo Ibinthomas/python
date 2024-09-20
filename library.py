@@ -1,5 +1,5 @@
-lib=[]
-book=[]
+lib=[{'id':101,'name':'ibin','email':'ibin@123','address':'kannur','mobile_no':8086939872,'password':123,'book':[]}]
+book=[{'book id':100,'book Name':'manjadi','stock':10,'price':50},{'book id':id,'book Name':'manjadi','stock':10,'price':50,}]
 
 def reg():
     
@@ -87,9 +87,34 @@ def display_users():
 
 def view_profile(user):
     print('_'*75)
-    print("{:<10}{:<15}{:<15}{:<15}{:<15}{:<15}".format('id','name','email id','address','mobile_no',))
-    print('-'*75)
-    print("{:<10}{:<15}{:<15}{:<15}{:<15}".format(user['id'],user['name'],user['email_id'],user['address'],user['mobile_no'],)) 
+    print("{:<10}{:<15}{:<15}{:<15}{:<15}".format('id','name','email','address','mobile_no',))
+    print('_'*75)
+    print("{:<10}{:<15}{:<15}{:<15}{:<15}".format(user['id'],user['name'],user['email'],user['address'],user['mobile_no'],)) 
+
+
+def take_book(user):
+    id=int(input('enter the book id: '))
+    f=0
+    for i in book:
+        if i['b_id']==id:
+            f=1
+            if i['stock']>0:
+                user['books'].append(i['b_id'])
+                i['stock']-=1
+            else:
+                print('out of stock!!!')
+    print(user)
+    if f==0:
+        print('iinvalid id!!!')
+
+def return_book(user):
+    id=int(input('enter the book id: '))
+    f=0
+    for i in book:
+        if i['b_id']==id:
+            f=1
+            user['books'].remove(i['b_id'])
+            i['stock']+=1
 
 while True:
     print('''
@@ -140,6 +165,15 @@ while True:
                 user_choice=int(input('Enter the choice :'))
                 if user_choice==1:
                     view_profile(user)
+                elif user_choice==2:
+                    view_book()
+                elif user_choice==3:
+                    take_book(user)
+                elif user_choice==4:
+                    return_book(user)
+                elif user_choice==6:
+                    break
+                
         else:
             print("invalid user name or password!")
     elif choice==3:
