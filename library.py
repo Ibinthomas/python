@@ -27,7 +27,7 @@ def login():
     uname=input("ente your user name :")
     password=input("enter the password :")
     f=0
-    if uname=='admin' and password=='admin':
+    if uname=='main admin' and password=='main admin':
         f=1
     user=''
     for i in lib:
@@ -37,14 +37,14 @@ def login():
     return f,user
 
 def add_book():
-    if (book)==0:
+    if len(book)==0:
         id=100
     else:
         id=book[-1]['book_id']+1
-    book_name=input('Enter your name : ')
-    stock=int(input('Eneter the stock : '))
-    price=int(input('Create a password : '))
-    book.append({'book_id':id,'book_name':book_name,'stock':stock,'price':price,})
+    book_name=input('Enter book name : ')
+    stock=int(input('How many stock in there : '))
+    price=int(input('Enter the price : '))
+    book.append({'book id':id,'book Name':book_name,'stock':stock,'price':price,})
 
 def view_book():
     print('_'*50)
@@ -80,11 +80,16 @@ def delete_book():
 
 def display_users():
     print('_'*75)
-    print("{:<10}{:<15}{:<15}{:<15}{:<15}{:<15}".format('id','name','place','address','mobile_no','email id'))
-    print('-'*75)
+    print("{:<10}{:<15}{:<15}{:<15}{:<15}".format('id','Name','Email id','Address','mobile No',))
+    print('_'*75)
     for i in lib:
-        print("{:<10}{:<15}{:<15}{:<15}{:<15}{:<15}".format(i['id'],i['name'],i['email_id'],i['address'],i['mobile_no'],))  
+        print("{:<10}{:<15}{:<15}{:<15}{:<15}".format(i['id'],i['name'],i['email_id'],i['address'],i['mobile_no'],))  
 
+def view_profile(user):
+    print('_'*75)
+    print("{:<10}{:<15}{:<15}{:<15}{:<15}{:<15}".format('id','name','email id','address','mobile_no',))
+    print('-'*75)
+    print("{:<10}{:<15}{:<15}{:<15}{:<15}".format(user['id'],user['name'],user['email_id'],user['address'],user['mobile_no'],)) 
 
 while True:
     print('''
@@ -122,7 +127,19 @@ while True:
                 elif sub_choice==6:
                     break
         elif f==2:
-            print('user login')
+            while True:
+                print("""
+                    1.View profile
+                    2.View book
+                    3.Select book
+                    4.Return book
+                    5.Book in hand
+                    6.Exit
+                    
+                """)
+                user_choice=int(input('Enter the choice :'))
+                if user_choice==1:
+                    view_profile(user)
         else:
             print("invalid user name or password!")
     elif choice==3:
