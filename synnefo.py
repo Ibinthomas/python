@@ -23,7 +23,7 @@ while True:
         position = input("Enter position: ")
         salary=float(input("Enter a salary: "))
         address=input("Enter the address :")
-        synnefo.append({'emp_id':id,'name':name, 'mob':mob_no,'position':position,'salary':salary,'address':address ,})
+        synnefo.append({'id':id,'name':name, 'mob':mob_no,'position':position,'salary':salary,'address':address ,})
         print("Empolyee added successfully!")
 
     elif choice == 2:
@@ -33,7 +33,7 @@ while True:
                 print('{:<10}{:<15}{:<15}{:<15}{:<15}{:<15}'.format('ID', 'Name', 'Mobile', 'Position', 'Salary','address'))
                 print('_' * 85)
                 for i in synnefo:
-                    print('{:<10}{:<15}{:<15}{:<15}{:<15}{:<15}'.format(i['emp_id'], i['name'], i['mob'], i['position'], i['salary'], i['address']))
+                    print('{:<10}{:<15}{:<15}{:<15}{:<15}{:<15}'.format(i['id'], i['name'], i['mob'], i['position'], i['salary'], i['address']))
             else:
                 print("Employee IS NOT FOUND")
 
@@ -41,7 +41,7 @@ while True:
 
         emp_id = input("Enter the Id of employee to update: ")
         for i in synnefo:
-            if i['emp_id'] == id:
+            if i['id'] == id:
                 mob_no = int(input("Enter a new mobile number: "))
                 salary = int(input("Enter a new salary: "))
                 address= input("Enter the new address :")
@@ -60,7 +60,7 @@ while True:
         time=input("Enter the time slot: ")
         subject = input("Enter the subject: ")
         lab_no = int(input("Enter the lab_no: "))
-        synnefo.append({'id':s_id,'s_name':s_name,'emp_time':time,'emp_subject':subject, 'emp_lab':lab_no})
+        synnefo.append({'s_id':s_id,'s_name':s_name,'emp_time':time,'emp_subject':subject, 'emp_lab':lab_no})
         print("Empolyee schedule added successfully!")
 
     elif choice == 5:
@@ -71,7 +71,7 @@ while True:
                 print('{:<10}{:<15}{:<15}{:<15}{:<15}'.format('ID', 'Name', 'Time', 'Subjuct', 'Lab number'))
                 print('_' * 70)
             for i in synnefo:
-                    print('{:<10}{:<15}{:<15}{:<15}{:<15}'.format(i['id'], i['s_name'], i['emp_time'], i['emp_subject'], i['emp_lab']))
+                print('{:<10}{:<15}{:<15}{:<15}{:<15}'.format(i['s_id'], i['s_name'], i['emp_time'], i['emp_subject'], i['emp_lab']))
             else:
                 print("Employee IS NOT FOUND")
 
@@ -80,7 +80,7 @@ while True:
         id=int(input('Enter the id to be delete: '))
         f=0
         for i in synnefo:
-            if i['emp_id']==id:
+            if i['id']==id:
                 synnefo.remove(i)
                 f=1
         if f==0:
@@ -94,7 +94,7 @@ while True:
         cource = input("Enter Cource: ")
         fee=float(input("Enter a Fee: "))
         address=input("Enter the address :")
-        synnefo.append({'student_id':std_id,'student_name':std_name, 'mob':std_mobno,'cource':cource,'std_fee':fee,'address':address ,})
+        synnefo.append({'std_id':std_id,'std_name':std_name, 'mob':std_mobno,'cource':cource,'std_fee':fee,'address':address ,})
         print("Empolyee added successfully!")
 
     elif choice == 8:
@@ -104,7 +104,36 @@ while True:
                 print('{:<10}{:<15}{:<15}{:<15}{:<15}{:<15}'.format('ID', 'Name', 'Mobile', 'Cource', 'Fee','address'))
                 print('_' * 85)
                 for i in synnefo:
-                    print('{:<10}{:<15}{:<15}{:<15}{:<15}{:<15}'.format(i['student_id'], i['student_name'], i['mob'], i['cource'], i['std_fee'], i['address']))
+                    print('{:<10}{:<15}{:<15}{:<15}{:<15}{:<15}'.format(i['std_id'], i['std_name'], i['mob'], i['cource'], i['std_fee'], i['address']))
             else:
                 print("Employee IS NOT FOUND")
-    
+        
+    elif choice==9:
+            
+            std_id = input("Enter the Id of student to update: ")
+            for i in synnefo:
+                if i ['std_id']==std_id:
+                    std_mobno = int(input("Enter a new mobile number: "))
+                    fee = int(input("Enter a new salary: "))
+                    address= input("Enter the new address :")
+                    i['std_mobno'] = std_mobno
+                    i['fee'] = fee
+                    i['address']= address
+                    print("student updated successfully.")
+                    break 
+
+    elif choice==10:
+         std_id=int(input('Enter the id to be delete: '))
+         f=0
+         for i in synnefo:
+            if i['std_id']==std_id:
+                synnefo.remove(i)
+                f=1
+         if f==0:
+            print('invalid id!!!')
+
+    elif choice == 11:
+        print("Existing .......")
+        break
+    else:
+        print("Invalid Choice")

@@ -1,5 +1,5 @@
 lib=[{'id':101,'name':'ibin','email':'ibin@123','address':'kannur','mobile_no':8086939872,'password':123,'book':[]}]
-book=[{'book id':100,'book Name':'manjadi','stock':10,'price':50},{'book id':id,'book Name':'manjadi','stock':10,'price':50,}]
+book=[{'book_id':100,'book_name':'manjadi','stock':10,'price':50},{'book_id':id,'book Name':'manjadi','stock':10,'price':50,}]
 
 def reg():
     
@@ -96,10 +96,10 @@ def take_book(user):
     id=int(input('enter the book id: '))
     f=0
     for i in book:
-        if i['b_id']==id:
+        if i['id']==id:
             f=1
             if i['stock']>0:
-                user['books'].append(i['b_id'])
+                user['books'].append(i['id'])
                 i['stock']-=1
             else:
                 print('out of stock!!!')
