@@ -84,21 +84,67 @@
 
 #HIRARCICAL INHARITANCE
 
-class college:
-    def exam(self):
+# class college:
+#     def exam(self):
+#         print("exam")
+#     def result(self):
+#         print("result")
+# class chm(college):
+#     def notes(self):
+#         print("notes")
+#     def assignement():
+#         print("assignment")
+# class bio(college):
+#     def notes(self):
+#         print("notes")
+#     def assignement():
+#         print("assignment")
+
+# s=chm()
+# s.assignement()
+
+# HYBRID INHERITANCE
+
+class synnefo:
+    def python(self):
+        print("python")
+    def network(self):
+        print("network")
+    def cyber(self):
+        print("cyber")
+
+class teacher(synnefo):
+    def labs(self):
+        print("labs")
+    def exams(self):
         print("exam")
+    def topics(self):
+        print("topics")
+
+class nonteach(synnefo):
+    def office(self):
+        print("office")
+    def technical(self):
+        print("technical")
+    def placement(self):
+        print("placement")
+
+class student(synnefo,teacher):
     def result(self):
         print("result")
-class chm(college):
-    def notes(self):
-        print("notes")
-    def assignement():
-        print("assignment")
-class bio(college):
-    def notes(self):
-        print("notes")
-    def assignement():
-        print("assignment")
+    def attendence(self):
+        print("attendence")
+    def exams(self):
+        print("exams")
 
-s=chm()
-s.assignement()
+a=synnefo()
+a.python()
+
+b=teacher()
+b.topics()
+
+c=nonteach()
+c.office()
+
+d=student()
+d.python()
