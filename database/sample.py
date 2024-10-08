@@ -51,6 +51,48 @@ except:
 # con.execute("update student set name=? where name=?",(n_name,name))
 # con.commit()
 
-r=input("enter the deletd student roll no :")
-con.execute("delet from student where roll_no=?",(r,))
-con.commit()
+# r=input("enter the deletd student roll no :")
+# con.execute("delet from student where roll_no=?",(r,))
+# con.commit()
+
+# like
+
+# data=con.execute("select * from student where name like 'a%'")
+# for i in data:
+#     print(i)
+
+
+# order by
+
+# data=con.execute("select * from student order by name")
+# for i in data:
+#     print(i)
+
+# DESCINDING ORDER 
+
+# data=con.execute("select * from student ORDER BY NAME DESC")
+# for i in data:
+#     print(i) 
+
+# GROUP BY 
+
+# data=con.execute("select * from student group by name")
+# for i in data:
+#     print(i)
+
+# AGGRIGATE FUNCTION
+
+# MAX
+data=con.execute("select name,max(mark) from student group by name")
+for i in data:
+    print(i)
+
+# MIN
+data=con.execute("select name,mix(mark) from student group by name")
+for i in data:
+    print(i)
+
+# AVG
+data=con.execute("select name,avg(mark) from student group by name")
+for i in data:
+    print(i)
