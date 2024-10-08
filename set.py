@@ -15,3 +15,5 @@ s.intersection_update(s1)
 print(s)
 s.symmetric_difference_update(s1)
 print(s)
+
+

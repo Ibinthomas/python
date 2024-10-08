@@ -1,12 +1,12 @@
 import re
 a='hello'
-# print(re.search('h',a))
-# print(re.search('hello',a))
-# print(re.search('b',a))
-# if re.search('h',a):
-#     print('match')
-# else:
-#     print('no match')
+print(re.search('h',a))
+print(re.search('hello',a))
+print(re.search('b',a))
+if re.search('h',a):
+    print('match')
+else:
+    print('no match')
 
 # if re.search('ab',a):
 #     print('match')
@@ -65,8 +65,8 @@ a='hello'
 
 # mobile number validation
 
-a='7510552623'
-if len(a)==10 and re.search('[6-9].{9}',a) and a.isdigit():
-    print('valid')
-else:
-    print('not valid')
+# a='7510552623'
+# if len(a)==10 and re.search('[6-9].{9}',a) and a.isdigit():
+#     print('valid')
+# else:
+#     print('not valid')
