@@ -218,6 +218,29 @@ A       B       C
 A       B       C
 """
 
-l=[2,4,1,3]
-for i in l:
-    print("*"*i)
+# l=[2,4,1,3]
+# for i in l:
+#     print("*"*i)
+
+# a=1
+# for i in range(3):
+#     for j in range(3-i):
+#         print(a, end=" ")
+#         a+=1
+#     print()
+
+''' 1 2 3 
+    4 5
+    6'''
+
+for i in range(3):
+    for j in range(1,3):
+        print(j, end=" ")
+    print(1)
+
+"""
+1 2 1
+1 2 1
+1 2 1
+"""
+
