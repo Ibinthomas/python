@@ -131,11 +131,35 @@ yes
 ['abi', 'deepa', 'ibin', 'diya', 'seena']
 """
 
-std=[]
-limit=int(input("enter a limit"))
-for i in range(limit):
-    names=input("enter a names:") 
-    age=int(input("enter a age:"))
-    mark=int(input("enter a mark:")) 
-    std.append([names,age,mark])
-print(std)
+# std=[]
+# limit=int(input("enter a limit"))
+# for i in range(limit):
+#     names=input("enter a names:") 
+#     age=int(input("enter a age:"))
+#     mark=int(input("enter a mark:")) 
+#     std.append([names,age,mark])
+# print(std)
+
+# l=[11,23,75,58,77]
+# l1=max(l)
+# print(l1)
+
+"""
+77
+
+"""
+# a='welcome'
+# l=len(a)
+# i=0
+# rev=''
+# while i<l:
+#     rev=a[i]+rev
+#     i+=1
+# print(rev)
+
+"""
+emoclew
+"""
+
+
+
